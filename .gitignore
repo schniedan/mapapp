@@ -1,0 +1,10 @@
+.metadata
+.recommenders
+RemoteSystemsTempFiles
+*.js.map
+typings
+node_modules
+.settings
+target
+.project
+.classpath

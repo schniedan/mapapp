@@ -1,0 +1,409 @@
+{
+	testMarkers : [
+		{
+			"address_components": [
+				{
+					"long_name": "Brisbane",
+					"short_name": "Brisbane",
+					"types": [
+						"colloquial_area",
+						"locality",
+						"political"
+					]
+				},
+				{
+					"long_name": "Queenslaaaaaaaand",
+					"short_name": "QLD",
+					"types": [
+						"administrative_area_level_1",
+						"political"
+					]
+				},
+				{
+					"long_name": "Australia",
+					"short_name": "AU",
+					"types": [
+						"country",
+						"political"
+					]
+				}
+			],
+			"adr_address": "<span class=\"locality\">Brisbane</span> <span class=\"region\">QLD</span>, <span class=\"country-name\">Australia</span>",
+			"formatted_address": "Brisbane QLD, Australia",
+			"geometry": {
+				"location": {
+					"lat": -27.4697707,
+					"lng": 153.02512350000006
+				},
+				"viewport": {
+					"south": -27.7674408,
+					"west": 152.66852270000004,
+					"north": -26.9968449,
+					"east": 153.31787029999998
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+			"id": "109dda35f4c11b490051baeae7f7474f51697ab0",
+			"name": "Brisbane",
+			"photos": [
+				{
+					"height": 2992,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/106919442231730187134/photos\">Chad Burrows</a>"
+					],
+					"width": 4000
+				},
+				{
+					"height": 768,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/103789334462881983675/photos\">AS AS</a>"
+					],
+					"width": 1024
+				},
+				{
+					"height": 3024,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/110944890433239872820/photos\">Abas Supeli</a>"
+					],
+					"width": 4032
+				},
+				{
+					"height": 800,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/118211569951033314614/photos\">Ann Nugent</a>"
+					],
+					"width": 1200
+				},
+				{
+					"height": 1534,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/109173336414636905992/photos\">Geoff Schatzel</a>"
+					],
+					"width": 2048
+				},
+				{
+					"height": 1736,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/113444514719006149116/photos\">Adam Dawson</a>"
+					],
+					"width": 4430
+				},
+				{
+					"height": 1365,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/105932078588305868215/photos\">Maksym Kozlenko</a>"
+					],
+					"width": 2048
+				},
+				{
+					"height": 1836,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/110037004483442438361/photos\">Barry Franks</a>"
+					],
+					"width": 3264
+				},
+				{
+					"height": 2988,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/112413891846692882247/photos\">darren jansz</a>"
+					],
+					"width": 5312
+				},
+				{
+					"height": 1536,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/107269825727279299612/photos\">Ajay Rajasekaran</a>"
+					],
+					"width": 2048
+				}
+			],
+			"place_id": "ChIJM9KTrJpXkWsRQK_e81qjAgQ",
+			"reference": "CmRbAAAA1AxvBvCj3gorgboitczaU22aIyMWpsOWY8Tg9DlYCznBkHRW5eXp15lS61lhfn_GvVWU4kQmNktEUyhoX5_WYRyR8Y6C7moGZ518Qux9Vu05-z8TZFPeCPBnSHAvTg7NEhCcs_mHJK8YilL0QR5JOcENGhT6BVvcRvR5GemxEzVj-qliRWXe1A",
+			"scope": "GOOGLE",
+			"types": [
+				"colloquial_area",
+				"locality",
+				"political"
+			],
+			"url": "https://maps.google.com/?q=Brisbane+QLD,+Australia&ftid=0x6b91579aac93d233:0x402a35af3deaf40",
+			"utc_offset": 600,
+			"vicinity": "Brisbane",
+			"html_attributions": []
+		}
+	]
+	app.js:126 updatedMarkers: [
+		{
+			"address_components": [
+				{
+					"long_name": "Brisbane",
+					"short_name": "Brisbane",
+					"types": [
+						"colloquial_area",
+						"locality",
+						"political"
+					]
+				},
+				{
+					"long_name": "Queensland",
+					"short_name": "QLD",
+					"types": [
+						"administrative_area_level_1",
+						"political"
+					]
+				},
+				{
+					"long_name": "Australia",
+					"short_name": "AU",
+					"types": [
+						"country",
+						"political"
+					]
+				}
+			],
+			"adr_address": "<span class=\"locality\">Brisbane</span> <span class=\"region\">QLD</span>, <span class=\"country-name\">Australia</span>",
+			"formatted_address": "Brisbane QLD, Australia",
+			"geometry": {
+				"location": {
+					"lat": -27.4697707,
+					"lng": 153.02512350000006
+				},
+				"viewport": {
+					"south": -27.7674408,
+					"west": 152.66852270000004,
+					"north": -26.9968449,
+					"east": 153.31787029999998
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+			"id": "109dda35f4c11b490051baeae7f7474f51697ab0",
+			"name": "Brisbane",
+			"photos": [
+				{
+					"height": 2992,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/106919442231730187134/photos\">Chad Burrows</a>"
+					],
+					"width": 4000
+				},
+				{
+					"height": 768,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/103789334462881983675/photos\">AS AS</a>"
+					],
+					"width": 1024
+				},
+				{
+					"height": 3024,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/110944890433239872820/photos\">Abas Supeli</a>"
+					],
+					"width": 4032
+				},
+				{
+					"height": 800,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/118211569951033314614/photos\">Ann Nugent</a>"
+					],
+					"width": 1200
+				},
+				{
+					"height": 1534,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/109173336414636905992/photos\">Geoff Schatzel</a>"
+					],
+					"width": 2048
+				},
+				{
+					"height": 1736,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/113444514719006149116/photos\">Adam Dawson</a>"
+					],
+					"width": 4430
+				},
+				{
+					"height": 1365,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/105932078588305868215/photos\">Maksym Kozlenko</a>"
+					],
+					"width": 2048
+				},
+				{
+					"height": 1836,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/110037004483442438361/photos\">Barry Franks</a>"
+					],
+					"width": 3264
+				},
+				{
+					"height": 2988,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/112413891846692882247/photos\">darren jansz</a>"
+					],
+					"width": 5312
+				},
+				{
+					"height": 1536,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/107269825727279299612/photos\">Ajay Rajasekaran</a>"
+					],
+					"width": 2048
+				}
+			],
+			"place_id": "ChIJM9KTrJpXkWsRQK_e81qjAgQ",
+			"reference": "CmRbAAAA1AxvBvCj3gorgboitczaU22aIyMWpsOWY8Tg9DlYCznBkHRW5eXp15lS61lhfn_GvVWU4kQmNktEUyhoX5_WYRyR8Y6C7moGZ518Qux9Vu05-z8TZFPeCPBnSHAvTg7NEhCcs_mHJK8YilL0QR5JOcENGhT6BVvcRvR5GemxEzVj-qliRWXe1A",
+			"scope": "GOOGLE",
+			"types": [
+				"colloquial_area",
+				"locality",
+				"political"
+			],
+			"url": "https://maps.google.com/?q=Brisbane+QLD,+Australia&ftid=0x6b91579aac93d233:0x402a35af3deaf40",
+			"utc_offset": 600,
+			"vicinity": "Brisbane",
+			"html_attributions": []
+		},
+		{
+			"address_components": [
+				{
+					"long_name": "Toowong",
+					"short_name": "Toowong",
+					"types": [
+						"locality",
+						"political"
+					]
+				},
+				{
+					"long_name": "Brisbane City",
+					"short_name": "Brisbane",
+					"types": [
+						"administrative_area_level_2",
+						"political"
+					]
+				},
+				{
+					"long_name": "Queensland",
+					"short_name": "QLD",
+					"types": [
+						"administrative_area_level_1",
+						"political"
+					]
+				},
+				{
+					"long_name": "Australia",
+					"short_name": "AU",
+					"types": [
+						"country",
+						"political"
+					]
+				},
+				{
+					"long_name": "4066",
+					"short_name": "4066",
+					"types": [
+						"postal_code"
+					]
+				}
+			],
+			"adr_address": "<span class=\"locality\">Toowong</span> <span class=\"region\">QLD</span> <span class=\"postal-code\">4066</span>, <span class=\"country-name\">Australia</span>",
+			"formatted_address": "Toowong QLD 4066, Australia",
+			"geometry": {
+				"location": {
+					"lat": -27.487,
+					"lng": 152.98400000000004
+				},
+				"viewport": {
+					"south": -27.4931638,
+					"west": 152.9703237,
+					"north": -27.4647051,
+					"east": 152.99794029999998
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+			"id": "177436bc49b22ed3e9beba576d231199074bbab5",
+			"name": "Toowong",
+			"photos": [
+				{
+					"height": 485,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/106139988778550763408/photos\">MoreThan Home Loans</a>"
+					],
+					"width": 728
+				},
+				{
+					"height": 2992,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/112505656003727746592/photos\">Wayne Boustead</a>"
+					],
+					"width": 4000
+				},
+				{
+					"height": 4000,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/108342579034025186110/photos\">jacob meyer-gleaves</a>"
+					],
+					"width": 2992
+				},
+				{
+					"height": 679,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/112505656003727746592/photos\">Wayne Boustead</a>"
+					],
+					"width": 2084
+				},
+				{
+					"height": 2988,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/106454126287552426881/photos\">Rhys McGoldrick</a>"
+					],
+					"width": 5312
+				},
+				{
+					"height": 2160,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/115412054678924097376/photos\">Patrick Wood</a>"
+					],
+					"width": 3840
+				},
+				{
+					"height": 3024,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/113031763130599470399/photos\">Pal Drooler</a>"
+					],
+					"width": 4032
+				},
+				{
+					"height": 2988,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/100018839428146840278/photos\">Matt Dekker</a>"
+					],
+					"width": 5312
+				},
+				{
+					"height": 4160,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/109634199637836795498/photos\">Victor M</a>"
+					],
+					"width": 3120
+				},
+				{
+					"height": 1152,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/117164024984505598020/photos\">Rachid Ghariss</a>"
+					],
+					"width": 2048
+				}
+			],
+			"place_id": "ChIJLYJ24cBQkWsRgJve81qjAgU",
+			"reference": "CmRbAAAAWGNDKxNaYHmiYScLW1LBa26shRxdqjB8dIOeXXEGH8vqtKF1Rz9HorQDnX32FDw2PkF-6CN8h8ofymowgOrkmDLH5Y3rpJ68-svSxN9YvNfOcLH1kFf2uLTz5G53tEgyEhB0hjKJ9vpGO6GJ4eyHUU7OGhQgZkrcDh0gUlHokrNoZ0UtJzkJHw",
+			"scope": "GOOGLE",
+			"types": [
+				"locality",
+				"political"
+			],
+			"url": "https://maps.google.com/?q=Toowong+QLD+4066,+Australia&ftid=0x6b9150c0e176822d:0x502a35af3de9b80",
+			"utc_offset": 600,
+			"vicinity": "Toowong",
+			"html_attributions": []
+		}
+	]
+}
