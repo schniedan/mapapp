@@ -4,7 +4,7 @@ var Header = React.createClass({
 render: function() {
 	return (
 	  <h2>
-		Journible
+		Mapvance
 	  </h2>
 	);
   }
@@ -16,15 +16,15 @@ class Map extends React.Component {
 		
 		this.state = {map: null}
 		
-	}	
+	}
 	
 	initMap() {
 		// Create a map object and specify the DOM element for display.
 		
 		var init_map = L.map('map').setView([-27.487, 152.98400000000004], 14);
-        var mapLink = 
+        var mapLink =
             '<a href="http://www.esri.com/">Esri</a>';
-        var wholink = 
+        var wholink =
             'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
         L.tileLayer(
             'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -42,10 +42,10 @@ class Map extends React.Component {
 		  zoom: 8,
 		  mapTypeId: 'satellite'
 		});
-*/		
+*/
 	}
 
-	componentDidMount() {	
+	componentDidMount() {
 		this.initMap();
 	}
 
@@ -67,7 +67,7 @@ class Map extends React.Component {
 			
 			var tripToken = new TripToken(place.geometry.location, place.address_components[0].short_name);
 			console.log(tripToken.getLocation().lat);
-*/			
+*/
 			//var marker = L.marker([place.geometry.location.lat, place.geometry.location.lng],
 			var marker = L.marker([token.getLocation().lat, token.getLocation().lng],
 				{
@@ -78,13 +78,13 @@ class Map extends React.Component {
 			).addTo(that.state.markerLayer);
 			//marker.bindTooltip(place.address_components[0].short_name, {className: 'toolTipClass', permanent: true, direction: 'bottom'}).openTooltip();
 			
-			token.setId(marker._leaflet_id);			
+			token.setId(marker._leaflet_id);
 						
 			marker.on('click', function() {
 				that.props.onTokenSelect(token);
 			});
 			
-			marker.on('dragend', function() {		
+			marker.on('dragend', function() {
 				that.props.tokenManuallyMoved(marker);
 			});
 			
@@ -92,9 +92,9 @@ class Map extends React.Component {
 			style.setAttribute('id', 'style' + marker._leaflet_id);
 			style.type = 'text/css';
 			style.innerHTML = '.iconClass' + marker._leaflet_id + token.getTextStyle();
-			document.getElementsByTagName('head')[0].appendChild(style);			
+			document.getElementsByTagName('head')[0].appendChild(style);
 			
-			var divIcon = L.divIcon({ 
+			var divIcon = L.divIcon({
 				html: token.getText(),
 				className: 'iconClass' + marker._leaflet_id
 			})
@@ -104,9 +104,9 @@ class Map extends React.Component {
 			
 			textMarker.on('click', function() {
 				that.props.onTokenSelect(token);
-			});	
+			});
 			
-			textMarker.on('dragend', function() {		
+			textMarker.on('dragend', function() {
 				that.props.tokenManuallyMoved(textMarker);
 			});
 			
@@ -124,13 +124,13 @@ class GoogleMarkerSearch extends React.Component {
 		this.state = {};
 		
 		this.handleResultSelected = this.handleResultSelected.bind(this);
-	}	
+	}
 	
 	componentDidMount() {
 		var input = document.getElementById('newMarkerSearch-input');
 		this.state.autocomplete = new google.maps.places.Autocomplete(input);
 		
-		this.state.autocomplete.addListener('place_changed', this.handleResultSelected);		
+		this.state.autocomplete.addListener('place_changed', this.handleResultSelected);
 	}
 	
 	handleResultSelected() {
@@ -140,7 +140,7 @@ class GoogleMarkerSearch extends React.Component {
 									 {lat: placeObject.geometry.location.lat(), lng: placeObject.geometry.location.lng()},
 									 placeObject.address_components[0].short_name);
 		
-		this.props.markerSelected(newToken);		
+		this.props.markerSelected(newToken);
 	}
 	
 	render() {
@@ -166,17 +166,17 @@ class OptimisticDataSaver extends React.Component {
 	}
 	
 	saveSuccess() {
-		console.log("Yeah");		
+		console.log("Yeah");
 		this.saveRequired = false;
-	}	
+	}
 	
 	componentDidUpdate(prevProps, prevState) {
         this.saveRequired = true;
-	}	  
+	}
 	
-	componentDidMount() {		
+	componentDidMount() {
 		this.timer = setInterval(this.updateIfRequired, 3000);
-	}  
+	}
 	
 	componentWillUnmount(){
         clearInterval(this.timer);
@@ -189,7 +189,7 @@ class OptimisticDataSaver extends React.Component {
 		}
     }
 	
-	sendData() {		
+	sendData() {
 		var jsonData = JSON.stringify({ trip: JSON.stringify(this.props.tripTokens) })
 		$.ajax({
 			type: "POST",
@@ -209,14 +209,14 @@ class OptimisticDataSaver extends React.Component {
 class Ui extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {}				
+		this.state = {}
 		
 		this.initTextSizeSlider   	= this.initTextSizeSlider.bind(this);
 		this.initColorPicker    	= this.initColorPicker.bind(this);
-	}	
+	}
 	
-	initTextSizeSlider() {		
-		if(this.props.selectedToken) {	
+	initTextSizeSlider() {
+		if(this.props.selectedToken) {
 			var textSizeSlider = $("#textSizeInput").slider();
 			var that = this;
 			textSizeSlider.on('change', function(change) {that.props.onTextSizeUpdate(change);});
@@ -242,21 +242,27 @@ class Ui extends React.Component {
 	}
 	
 	componentDidUpdate(prevProps, prevState) {
-		this.initTextSizeSlider();	
-		this.initColorPicker();		
+		this.initTextSizeSlider();
+		this.initColorPicker();
 	}
 	
 	render() {
 		var rows = [];
 		var that = this;
-		
 		this.props.tripTokens.forEach(function(token) {
-			
+			//{'tokenTitleEdit' + token.getId()}
 				rows.push (
-						<a href="#" key={token.getId()} onClick={ () => {that.props.onTokenSelect(token)} } className="list-group-item">{token.getText()}<span className="glyphicon glyphicon-remove pull-right" aria-hidden="true" onClick={ () => {that.props.onTokenDelete(token, event)} }></span></a>
+						<span href="#" key={token.getId()} onClick={ () => {that.props.onTokenSelect(token)} } className="list-group-item"><a className="editableText editable-click" id="blah"  data-pk={token.getId()} data-type="text">{token.getText()}</a><span className="glyphicon glyphicon-remove pull-right" aria-hidden="true" onClick={ () => {that.props.onTokenDelete(token, event)} }></span></span>
 				);
 			}
 		);
+		
+		$.fn.editable.defaults.mode = 'inline';
+		$(document).ready(function() {
+            //$('[id^=tokenTitleEdit]').editable();
+            $('blah').editable();
+        });
+		
 					
 		return (
 			<div id="uiComponent">
@@ -274,26 +280,26 @@ class Ui extends React.Component {
 				{rows}
 				</div>
 				
-				{	this.props.selectedToken && 
+				{	this.props.selectedToken &&
 					<div>
 						<input id="textSizeInput" data-slider-id='textSizeSlider' type="text" data-slider-min="0" data-slider-max="30" data-slider-step="1" data-slider-value={this.props.selectedToken.getTextSize()}/>
 						<br />
-						<br />					
+						<br />
 						<div id="cp2" className="col-xs-1">
 							<span className="input-group-addon"><br /></span>
 						</div>
-						<div className="col-xs-1"> 
-							<ReactFontPicker	
+						<div className="col-xs-1">
+							<ReactFontPicker
 								fonts={["Arial",
 										"Arial Black",
 										"Arial Narrow",
 										"Courier New",
 										"Georgia",
 										"Gill Sans",
-										"Impact", 
+										"Impact",
 										"Lucida Sans Unicode",
-										"Palatino Linotype", 
-										"Tahoma", 
+										"Palatino Linotype",
+										"Tahoma",
 										"Times New Roman",
 										"Trebuchet MS",
 										"Verdana"]}
@@ -324,13 +330,13 @@ class App extends React.Component {
 			var loadedToken = [];
 			var parsedData = JSON.parse(data["trip"]);
 			if(parsedData) {
-				parsedData.forEach(function(marker) {					
+				parsedData.forEach(function(marker) {
 					loadedToken.push(new TripToken(marker._location, marker._textLocation, marker._text, marker._textSize, marker._textColor, marker._textFont));
 				});
 				
 				that.setState({
-					tripTokens: loadedToken				
-				});	
+					tripTokens: loadedToken
+				});
 			}
 		
 		});
@@ -344,7 +350,7 @@ class App extends React.Component {
 		this.onTokenManuallyMoved   = this.onTokenManuallyMoved.bind(this);
 		this.getTokenById   		= this.getTokenById.bind(this);
 		this.getTokenByTextMarkerId = this.getTokenByTextMarkerId.bind(this);
-	}	
+	}
 	
 	getTokenById(searchId) {
 		for (let t of this.state.tripTokens) {
@@ -353,7 +359,7 @@ class App extends React.Component {
 				return t;
 			}
 		}
-	}	
+	}
 	
 	getTokenByTextMarkerId(searchId) {
 		for (let t of this.state.tripTokens) {
@@ -391,10 +397,10 @@ class App extends React.Component {
 	updateMarkers(newToken) {
 		this.setState({
 			tripTokens: this.state.tripTokens.concat([newToken])
-		});		
+		});
 	}
 	
-	deleteToken(delToken, event) {		
+	deleteToken(delToken, event) {
 		
 		event.stopPropagation();
 		
@@ -425,14 +431,14 @@ class App extends React.Component {
 		var token = this.state.selectedToken;
 		token.setTextColor(color.toHex());
 		var style = document.getElementById('style' + token.getId());
-		style.innerHTML = '.iconClass' + token.getId() + token.getTextStyle();	
+		style.innerHTML = '.iconClass' + token.getId() + token.getTextStyle();
 	}
 	
 	updateTextFont(font) {
 		var token = this.state.selectedToken;
 		token.setTextFont(font);
 		var style = document.getElementById('style' + token.getId());
-		style.innerHTML = '.iconClass' + token.getId() + token.getTextStyle();		
+		style.innerHTML = '.iconClass' + token.getId() + token.getTextStyle();
 		//this.selectToken(this.state.selectedToken);
 	}
 	
@@ -440,13 +446,13 @@ class App extends React.Component {
 		return (
 			<div className="app">
 			  <Header />
-				<Map 	tripTokens			= {this.state.tripTokens} 					
-						onTokenSelect		= {this.selectToken}	
+				<Map 	tripTokens			= {this.state.tripTokens}
+						onTokenSelect		= {this.selectToken}
 						tokenManuallyMoved  = {this.onTokenManuallyMoved}
 				/>
 						
-				<Ui 	onMarkerUpdate		= {this.updateMarkers} 
-						onTokenDelete		= {this.deleteToken} 
+				<Ui 	onMarkerUpdate		= {this.updateMarkers}
+						onTokenDelete		= {this.deleteToken}
 						onTextSizeUpdate	= {this.updateTextSize}
 						onTextColorUpdate	= {this.updateTextColor}
 						onTextFontUpdate	= {this.updateTextFont}
@@ -454,7 +460,7 @@ class App extends React.Component {
 						tripTokens			= {this.state.tripTokens}
 						selectedToken		= {this.state.selectedToken} />
 				  
-				<OptimisticDataSaver 
+				<OptimisticDataSaver
 						tripTokens			= {this.state.tripTokens}
 				/>
 			</div>
